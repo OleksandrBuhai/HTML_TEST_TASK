@@ -1,0 +1,25 @@
+@import './card-detail'; 
+@import './card-images'; 
+
+.card {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+
+    .card-properties-container {
+        display: flex;
+        flex-direction: row;
+        gap: 48px;
+    }
+}
+
+@media (max-width:360px) {
+    .card {
+        .card-properties-container {
+            flex-direction: column;
+            gap: 24px;
+
+        }
+    }
+}

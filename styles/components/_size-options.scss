@@ -1,0 +1,130 @@
+.size-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    h3.size-heading {
+        font-size: 18px;
+        margin-bottom: 8px;
+        font-weight: bold;
+
+        span.selected-size {
+            font-weight: normal;
+        }
+    }
+
+    .size-tabs {
+        display: flex;
+        list-style: none;
+        gap: 10px;
+
+        .size-tab-button {
+            text-decoration: none;
+            background-color: transparent;
+            cursor: pointer;
+
+            &.active {
+                color: $secondary-color;
+            }
+        }
+    }
+
+    .size-options {
+        width: 552px;
+
+        .size-tab-content {
+            display: none;
+
+            &.active {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 10px;
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    display: contents;
+
+                    .sold-out-size {
+                        position: relative;
+                        border-radius: 8px;
+                        pointer-events: none;
+                        opacity: 0.5;
+                        border-color: rgba(147, 152, 156, 1);
+                        background-color: rgba(197, 199, 202, 0.2);
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 35%;
+                            width: 30px;
+                            height: 1px;
+                            background-color: rgba(33, 38, 44, 0.8);
+                            transform: translateY(-50%);
+                        }
+                    }
+
+                    li {
+                        margin: 0;
+                        display: flex;
+
+                        button {
+                            width: 102.4px;
+                            height: 40px;
+                            padding: 8px;
+                            border: 1px solid $primary-color;
+                            border-radius: 8px;
+                            background-color: transparent;
+                            cursor: pointer;
+
+                            &:hover {
+                                background-color: $neutral-200;
+                            }
+
+                            &.selected {
+                                background-color: $neutral-200;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 360px) {
+    .size-selection {
+        .size-options {
+            width: 361px;
+            height: 144px;
+            .size-tab-content{
+            &.active {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 12px;
+                ul{
+                    .sold-out-size{
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 25%;
+                        width: 25px;
+                        height: 1px;
+                        background-color: rgba(33, 38, 44, 0.8);
+                        transform: translateY(-50%);
+                    }
+                }
+                    li {
+                        button {
+                            width: 59.4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testing Layout</title>
+  <link rel="stylesheet" href="dist/styles.css">
+</head>
+
+<body>
+  <header class="header"></header>
+
+  <main class="main-content">
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li class="unselected"><a href="#">Home</a></li>
+        <li class="unselected"><a href="#">Unisex Shoes</a></li>
+        <li class="selected"><a href="#">Unisex SportStyle Shoes</a></li>
+      </ul>
+    </nav>
+
+    <section class="content">
+      <article class="card">
+        <div class="card-properties-container">
+
+          <div class="card-images">
+            <div class="card-images-container">
+              <img id="mainImage" src="assets/images/mainImage/asicsBlack/imageFront.png" alt="Main Image">
+            </div>
+            <div class="card-images-thumbnail"></div>
+          </div>
+
+          <div class="card-details">
+            <div class="price-section">
+              <h2 class="product-title">Product Name</h2>
+              <h3 class="price-heading"><h3 class="selected-price">-</h3></h3>
+            </div>
+
+            <div class="color-selection">
+              <h3 class="color-heading">Colour: <span class="selected-color">-</span></h3>
+              <div class="color-options-container"> </div>
+            </div>
+            <div class="size-selection">
+              <h3 class="size-heading">Size: <span class="selected-size">selected size</span></h3>
+              <ul class="size-tabs">
+                <li class="size-tab-button active" data-tab="eu">EU</li>
+                <li class="size-tab-button" data-tab="uk">UK</li>
+                <li class="size-tab-button" data-tab="us">US</li>
+                <li class="size-tab-button" data-tab="cm">Foot Length (cm)</li>
+              </ul>
+              <div class="size-options">
+                <div class="size-tab-content active" id="eu">
+                  <ul>
+                    <li><button>39.5</button></li>
+                    <li><button>40</button></li>
+                    <li><button>41</button></li>
+                    <li><button>41.5</button></li>
+                    <li><button>42</button></li>
+                    <li><button>42.5</button></li>
+                    <li><button>43</button></li>
+                    <li><button>43.5</button></li>
+                    <li><button>44</button></li>
+                    <li><button>44.5</button></li>
+                    <li><button>45</button></li>
+                    <li><button>45.5</button></li>
+                    <li><button>46</button></li>
+                    <li class="sold-out-size" ><button>46.5</button></li>
+                    <li class="sold-out-size" ><button>47</button></li>
+                  </ul>
+                </div>
+                <div class="size-tab-content" id="uk">
+                  <ul>
+                    <li><button>6</button></li>
+                    <li><button>6.5</button></li>
+                    <li><button>7</button></li>
+                    <li><button>7.5</button></li>
+                    <li><button>8</button></li>
+                    <li><button>8.5</button></li>
+                    <li><button>9</button></li>
+                    <li><button>9.5</button></li>
+                    <li><button>10</button></li>
+                    <li><button>10.5</button></li>
+                    <li><button>11</button></li>
+                    <li class="sold-out-size" ><button>11.5</button></li>
+                    <li class="sold-out-size" ><button>12</button></li>
+                    <li><button>12.5</button></li>
+                    <li><button>13</button></li>
+                  </ul>
+                </div>
+                <div class="size-tab-content" id="us">
+                  <ul>
+                    <ul>
+                      <li><button>7</button></li>
+                      <li><button>7.5</button></li>
+                      <li><button>8</button></li>
+                      <li><button>8.5</button></li>
+                      <li><button>9</button></li>
+                      <li><button>9.5</button></li>
+                      <li><button>10</button></li>
+                      <li><button>10.5</button></li>
+                      <li><button>11</button></li>
+                      <li><button>11.5</button></li>
+                      <li><button>12</button></li>
+                      <li><button>12.5</button></li>
+                      <li class="sold-out-size" ><button>13</button></li>
+                      <li class="sold-out-size" ><button>13.5</button></li>
+                      <li><button>14</button></li>
+                    </ul>
+                  </ul>
+                </div>
+                <div class="size-tab-content" id="cm">
+                  <ul>
+                    <li><button>24.5</button></li>
+                    <li><button>25</button></li>
+                    <li><button>25.4</button></li>
+                    <li><button>25.8</button></li>
+                    <li><button>26.2</button></li>
+                    <li><button>26.7</button></li>
+                    <li><button>27.1</button></li>
+                    <li><button>27.5</button></li>
+                    <li><button>27.9</button></li>
+                    <li><button>28.4</button></li>
+                    <li class="sold-out-size" ><button>28.8</button></li>
+                    <li class="sold-out-size" ><button>29.2</button></li>
+                    <li><button>29.6</button></li>
+                    <li><button>30.1</button></li>
+                    <li><button>30.5</button></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="actions">
+              <button class="add-to-cart">
+                <img src="assets/images/buttonImage/cart.png" alt="Cart Icon">
+                <span>Add to Cart</span>
+              </button>
+              <button class="like">
+                <img src="assets/images/buttonImage/like.png" alt="Like Icon">
+              </button>
+              <button class="compare">
+                <img src="assets/images/buttonImage/compare.png" alt="Compare Icon">
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="info-tabs">
+        <ul class="tabs">
+          <li class="tab-button active" data-tab="description">Description</li>
+          <li class="tab-button" data-tab="details">Details</li>
+          <li class="tab-button" data-tab="shipping">Shipping</li>
+        </ul>
+        <div class="product-tabs-content"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+  <script src="sizeTabLogic.js"></script>
+</body>
+
+</html>

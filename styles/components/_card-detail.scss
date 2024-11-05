@@ -1,0 +1,41 @@
+.card-details {
+    width: 552px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3.price-heading {
+        font-size: 18px;
+        margin-bottom: 8px;
+        font-weight: bold;
+
+        span.selected-price {
+            font-weight: normal;
+        }
+    }
+
+    h3.color-heading {
+        font-size: 18px;
+        margin-bottom: 8px;
+        font-weight: bold;
+
+        span.selected-color {
+            font-weight: normal;
+        }
+    }
+
+    @import './color-option';
+    @import './size-options';
+    @import './actions';
+}
+
+@media (max-width:360px){
+    .card-details{
+        width: 360px;
+    }
+}

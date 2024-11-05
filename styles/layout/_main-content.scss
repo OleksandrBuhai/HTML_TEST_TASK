@@ -1,0 +1,16 @@
+.main-content {
+    padding: 74px;
+    gap: 24px;
+      
+    .content {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+  }
+  @media (max-width:360px){
+    .main-content{
+    padding: 16px;
+    }
+  }
